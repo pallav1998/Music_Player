@@ -30,7 +30,7 @@ function CanvasBars() {
     arr[i] = -arr[i];
     // i++;
   }
-  console.log(arr);
+  // console.log(arr);
   for (let i = 0; i < arr.length; i++) {
     context.fillRect(i, 100, 8, -arr[i]);
     i = i + 5;
@@ -43,16 +43,16 @@ let curr_track = document.createElement("audio");
 // Define the tracks that have to be played
 let track_list = [
   {
-    name: "Closer",
-    path: "/Songs/Closer.mp3",
+    name: "Despacito",
+    path: "./Songs/Despacito.mp3",
   },
   {
-    name: "Despacito",
-    path: "E:/MASAI Repo/Company/Songs/Despacito.mp3",
+    name: "Closer",
+    path: "./Songs/Closer.mp3",
   },
   {
     name: "Love Me Like You Do",
-    path: "E:/MASAI Repo/Company/Songs/Love_Me_Like_You_Do.mp3",
+    path: "./Songs/Love.mp3",
   },
 ];
 
@@ -79,7 +79,7 @@ function loadTrack(track_index) {
   track_name.textContent = track_list[track_index].name;
 
   curr_track.src = track_list[track_index].path;
-  console.log("curr_track.src:", curr_track.src);
+  // console.log("curr_track.src:", curr_track.src);
   curr_track.load();
 
   updateTimer = setInterval(seekUpdate, 1000);
@@ -151,8 +151,8 @@ function seekUpdate() {
   if (!isNaN(curr_track.duration)) {
     seekPosition = curr_track.currentTime * (100 / curr_track.duration);
     // console.log("seekPosition:", seekPosition);
-
     seek_slider.value = seekPosition;
+    progress.style.width = `${Number(seekPosition)}%`;
 
     let currentMinutes = Math.floor(curr_track.currentTime / 60);
     let currentSeconds = Math.floor(
@@ -175,7 +175,6 @@ function seekUpdate() {
     if (durationMinutes < 10) {
       durationMinutes = "0" + durationMinutes;
     }
-    progress.style.width = `${Number(seekPosition)}%`;
 
     curr_time.textContent = `${currentMinutes}:${currentSeconds}`;
     total_duration.textContent = `${durationMinutes}:${durationSeconds}`;
