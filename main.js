@@ -22,10 +22,10 @@ let updateTimer;
 
 //Canvas Logic
 function CanvasBars() {
-  canvas.width = 1000;
+  canvas.width = 2000;
   canvas.height = 200;
   context.fillStyle = "brown";
-  let arr = Array.from({ length: 1000 }, () => Math.floor(Math.random() * 100));
+  let arr = Array.from({ length: 1500 }, () => Math.floor(Math.random() * 100));
   for (let i = 0; i < arr.length; i += 9) {
     arr[i] = -arr[i];
     // i++;

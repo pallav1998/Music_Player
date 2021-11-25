@@ -2,6 +2,11 @@
   padding: 0px;
   margin: 0px;
 }
+body {
+  min-width: 500px;
+  background-color: lightgreen;
+  transition: background-color 0.5s;
+}
 
 .h1_text {
   text-align: center;
@@ -26,16 +31,14 @@
 #progress {
   position: static;
   /* background-color: black; */
-  background-image: linear-gradient(90deg, rgba(255, 255, 0, 0.609), rgba(0, 128, 0, 0.794));
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 255, 0, 0.609),
+    rgba(0, 128, 0, 0.794)
+  );
   height: 100%;
   border-radius: 5px;
   transition: width 0.1s linear;
-}
-
-body {
-  background-color: lightgreen;
-  transition: background-color 0.5s;
-  /* background-color: ; */
 }
 
 .player {
@@ -83,7 +86,6 @@ body {
 
 .slider_container {
   width: 90vw;
-  /* max-width: 400px; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -98,10 +100,12 @@ body {
 
 .seek_slider {
   width: 60%;
+  min-width: 300px;
 }
 
 .volume_slider {
   width: 30%;
+  min-width: 200px;
 }
 
 .current-time,
