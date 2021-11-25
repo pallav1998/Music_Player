@@ -1,0 +1,122 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+.h1_text {
+  text-align: center;
+  font-size: 50px;
+  background-image: linear-gradient(90deg, red, blue);
+  background-clip: text;
+  -webkit-background-clip: text;
+  width: fit-content;
+  margin: auto;
+  color: transparent;
+}
+
+#outer_div {
+  cursor: pointer;
+  width: 90%;
+  overflow: hidden;
+  margin: auto;
+  border-radius: 5px;
+  margin-top: 8vh;
+}
+
+#progress {
+  position: static;
+  /* background-color: black; */
+  background-image: linear-gradient(90deg, rgba(255, 255, 0, 0.609), rgba(0, 128, 0, 0.794));
+  height: 100%;
+  border-radius: 5px;
+  transition: width 0.1s linear;
+}
+
+body {
+  background-color: lightgreen;
+  transition: background-color 0.5s;
+  /* background-color: ; */
+}
+
+.player {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 3vh;
+}
+
+.details {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.now-playing {
+  font-size: 1rem;
+}
+
+.track-name {
+  font-size: 3rem;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.playpause-track,
+.prev-track,
+.next-track {
+  padding: 25px;
+  opacity: 0.8;
+  /* Smoothly transition the opacity */
+  transition: opacity 0.2s;
+}
+
+.playpause-track:hover,
+.prev-track:hover,
+.next-track:hover {
+  opacity: 1;
+}
+
+.slider_container {
+  width: 90vw;
+  /* max-width: 400px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modify the appearance of the slider */
+.seek_slider,
+.volume_slider {
+  height: 8px;
+  cursor: pointer;
+}
+
+.seek_slider {
+  width: 60%;
+}
+
+.volume_slider {
+  width: 30%;
+}
+
+.current-time,
+.total-duration {
+  padding: 10px;
+}
+
+i.fa-volume-down,
+i.fa-volume-up {
+  padding: 10px;
+}
+
+i.fa-play-circle,
+i.fa-pause-circle,
+i.fa-step-forward,
+i.fa-step-backward {
+  cursor: pointer;
+}
